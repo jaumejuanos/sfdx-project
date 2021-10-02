@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>jaumejuanos@outlook.com</contactEmail>
+    <label>sfdx travis ci</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDtTCCAp0CFHPTrYB4+qTLSM4XfY7aGrY1iLPaMA0GCSqGSIb3DQEBCwUAMIGWMQswCQYDVQQGEwJFUzEMMAoGA1UECAwDQ0FUMRIwEAYDVQQHDAlCQVJDRUxPTkExEjAQBgNVBAoMCU9NRUdBIENSTTETMBEGA1UECwwKQ09OU1VMVElORzEUMBIGA1UEAwwLamF1bWVqdWFub3MxJjAkBgkqhkiG9w0BCQEWF2phdW1lanVhbm9zQG91dGxvb2suY29tMB4XDTIwMTIyOTE5MTA0NVoXDTIxMTIyOTE5MTA0NVowgZYxCzAJBgNVBAYTAkVTMQwwCgYDVQQIDANDQVQxEjAQBgNVBAcMCUJBUkNFTE9OQTESMBAGA1UECgwJT01FR0EgQ1JNMRMwEQYDVQQLDApDT05TVUxUSU5HMRQwEgYDVQQDDAtqYXVtZWp1YW5vczEmMCQGCSqGSIb3DQEJARYXamF1bWVqdWFub3NAb3V0bG9vay5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDtNBIwbLCo7c2UHNlUBWzketv/M4k3Uprw5k/cdSItW919175reaWode/Gy2BOTgnY2Z0LXMEjhlF46knDDNJ2LmB3kRPS0v77sWGtD7iIZLcujaMDUDbfE3TBAeFFdtWmU6i5nUknHuoxAIfouuN5s705u7RCmNF+9q+xSgUh8BAtjpc19UWAy/UmqYRluTXx5O4dHAM+sFssoaYH7sLZqtSsgQSJht+H2Or/JrHM9sBHwhWROmNB7VlDXfWkQrY1I4N0GK0h7ExUTnVFntBTo5dIjJtId+yBlTHCSgsEoW0bwwAzIUb/vbSnwkWqK4p319N1PrCjnYUMzfEAVk7JAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAI/snTAoM0Lg+s1tS5ioTRxtVp5k8TR2itGFviTIGNRI5+/COgQBtnoMJ3Ipkr5gHVRYxs/MC13ZtPZ6fqSM9i3MFqXN3YW5CyoUZiN1xpWRjZZVhhd74RHzinOcFueBYKliSikuYzGXxfRbakY8iGcZcw3o41EKFQCgpD4lNlbhXdHhmTBEHZsl6/PNPgmoxDJKeunhAJ0gHLXr4ainN/9C7ulTSDGf4/WsnDqimx5yPRbByrQusyj9lk39W6fagDw285+44qpDknsGdLadrXO6awJn2htZjLvVAtkTjaZyOyjIwYlYBcArvHbExKrGNjWl6jE5X1r2DIwRBjzau1w=</certificate>
+        <consumerKey>3MVG9I5UQ_0k_hTmhkhrsYhM5227MCEQDEyB9xNZER9YldEOhPiWJrhrQPdg6fahmX4fzS.vawM5emXrZd3jV</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>sfdx travis ci</permissionSetName>
+</ConnectedApp>
