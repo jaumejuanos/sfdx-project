@@ -1,0 +1,18 @@
+<template>
+  <lightning-card title="XSS - Example of DOM XSS">
+    <div class="slds-var-p-around_medium">
+      <p>
+        Malicious scripts may come from user inputs. To see this example in
+        action, enter <code>alert('Malicious!')</code>
+        in the input.
+      </p>
+    </div>
+    <lightning-input
+      class="slds-m-around_small"
+      type="text"
+      label="Input:"
+      value={searchValue}
+      onchange={handleInputChange}
+    ></lightning-input>
+  </lightning-card>
+</template>

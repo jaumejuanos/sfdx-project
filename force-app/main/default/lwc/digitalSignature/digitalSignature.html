@@ -1,0 +1,21 @@
+<template>
+  <lightning-card title="Digital Signature">
+    <div class="slds-var-p-around_medium">
+      <p>Generate digital signature using SHA1.</p>
+      <div class="slds-var-m-top_medium">
+        <lightning-button
+          label="Generate Digital Signature in Origin"
+          onclick={handleOriginButtonClick}
+        ></lightning-button>
+        <lightning-button
+          label="Generate Digital Signature in Destination"
+          onclick={handleDestinationButtonClick}
+        ></lightning-button>
+      </div>
+      <p class="slds-var-m-top_medium slds-truncate">
+        Digital Signature in origin: {originDigitalSignature}
+      </p>
+      <p class="slds-truncate">Check correct: {correct}</p>
+    </div>
+  </lightning-card>
+</template>
