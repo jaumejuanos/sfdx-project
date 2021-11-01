@@ -69,6 +69,10 @@
 </types>
 <types>
     <members>*</members>
+    <name>CustomApplication</name>
+</types>
+<types>
+    <members>*</members>
     <name>CustomLabels</name>
 </types>
 <types>
@@ -85,11 +89,23 @@
 </types>
 <types>
     <members>*</members>
+    <name>FlexiPage</name>
+</types>
+<types>
+    <members>*</members>
     <name>Flow</name>
 </types>
 <types>
     <members>*</members>
+    <name>FlowDefinition</name>
+</types>
+<types>
+    <members>*</members>
     <name>Letterhead</name>
+</types>
+<types>
+    <members>*</members>
+    <name>LightningComponentBundle</name>
 </types>
 <types>
     <members>*</members>

@@ -1,0 +1,17 @@
+[
+  {
+    "sobject": "Account__c",
+    "saveRefs": false,
+    "files": ["Accounts.json"]
+  },
+  {
+    "sobject": "Lead__c",
+    "saveRefs": false,
+    "files": ["Leads.json"]
+  },
+  {
+    "sobject": "Contact__c",
+    "saveRefs": false,
+    "files": ["Contacts.json"]
+  }
+]
