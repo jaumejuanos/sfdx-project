@@ -7,8 +7,9 @@ public with sharing class AccountController {
   @AuraEnabled(cacheable=true)
   public static List<Account> getFilteredAccountsInjection(String searchValue) {
     String likeValue = '\'%' + searchValue + '%\'';
+    String sec = 'Security';
     return (List<Account>) Database.query(
-      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Name LIKE ' +
+      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Type = :sec AND Name LIKE ' +
       likeValue +
       ' ORDER BY Name'
     );
@@ -24,8 +25,9 @@ public with sharing class AccountController {
     String searchValue
   ) {
     String filterValue = String.isEmpty(searchValue) ? '0' : searchValue;
+    String sec = 'Security';
     return (List<Account>) Database.query(
-      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE NumberOfEmployees > ' +
+      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Type = :sec AND NumberOfEmployees > ' +
       filterValue +
       ' ORDER BY Name'
     );
@@ -43,7 +45,7 @@ public with sharing class AccountController {
     return [
       SELECT Name, AnnualRevenue, Industry
       FROM Account
-      WHERE Name LIKE :likeValue
+      WHERE Type = 'Security' AND Name LIKE :likeValue
       ORDER BY Name
     ];
   }
@@ -57,11 +59,49 @@ public with sharing class AccountController {
     String searchValue
   ) {
     String likeValue = '%' + searchValue + '%';
+    String sec = 'Security';
     return (List<Account>) Database.query(
-      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Name LIKE :likeValue ORDER BY Name'
+      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Type = :sec AND Name LIKE :likeValue ORDER BY Name'
     );
   }
 
+   /**
+   * In this method we test the stripinaccessible feature :
+   */
+  @AuraEnabled(cacheable=true)
+  public static List<Account> getFilteredAccountsStripped(
+    String searchValue
+  ) {
+    String likeValue = '%' + searchValue + '%';
+    String sec = 'Security';
+    String soql = 'SELECT Name, AnnualRevenue, Industry, Type FROM Account WHERE Type = :sec AND (Name LIKE :likeValue OR Industry LIKE :likeValue OR Type LIKE :likeValue) ORDER BY Name';
+    
+    List<Account> acct=Database.query(soql);
+    SObjectAccessDecision securityDecision = Security.stripInaccessible(AccessType.READABLE,Database.query(soql));
+    if (securityDecision.getRemovedFields().size() > 0 )
+    {
+        return(securityDecision.getRecords());            
+    }
+    else
+      {
+        return (acct);
+      }
+  }
+
+     /**
+   * In this method we test the WITH_SECURITY_ENFORCED feature :
+   */
+  @AuraEnabled(cacheable=true)
+  public static List<Account> getFilteredAccountsEnforced(
+    String searchValue
+  ) {
+    String likeValue = '%' + searchValue + '%';
+    String sec = 'Security';
+    String soql = 'SELECT Name, AnnualRevenue, Industry, Type FROM Account WHERE Type = :sec AND (Name LIKE :likeValue OR Industry LIKE :likeValue OR Type LIKE :likeValue) WITH SECURITY_ENFORCED ORDER BY Name';
+    
+    List<Account> acct=Database.query(soql);
+    return (acct);
+  }
   /**
    * In this method we prevent SOQL Injection
    * by escaping single quotes - not safe in all cases!
@@ -69,8 +109,9 @@ public with sharing class AccountController {
   @AuraEnabled(cacheable=true)
   public static List<Account> getFilteredAccountsEscaping(String searchValue) {
     String likeValue = '\'%' + String.escapeSingleQuotes(searchValue) + '%\'';
+    String sec = 'Security';
     return (List<Account>) Database.query(
-      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Name LIKE ' +
+      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Type = :sec AND Name LIKE ' +
       likeValue +
       ' ORDER BY Name'
     );
@@ -85,11 +126,12 @@ public with sharing class AccountController {
   public static List<Account> getFilteredAccountsEscapingNotEffective(
     String searchValue
   ) {
+    String sec = 'Security';
     String filterValue = String.isEmpty(searchValue)
       ? '0'
       : String.escapeSingleQuotes(searchValue);
     return (List<Account>) Database.query(
-      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE NumberOfEmployees > ' +
+      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Type = :sec AND NumberOfEmployees > ' +
       filterValue +
       ' ORDER BY Name'
     );
@@ -106,8 +148,9 @@ public with sharing class AccountController {
     Integer filterValue = String.isEmpty(searchValue)
       ? 0
       : Integer.valueOf(searchValue);
+      String sec = 'Security';
     return (List<Account>) Database.query(
-      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE NumberOfEmployees > ' +
+      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Type = :sec AND NumberOfEmployees > ' +
       filterValue +
       ' ORDER BY Name'
     );
@@ -127,12 +170,13 @@ public with sharing class AccountController {
     allowedValues.put('1000', 1000);
 
     Integer filterValue = allowedValues.get(searchValue);
+    String sec = 'Security';
 
     if (filterValue == null) {
       filterValue = 0;
     }
     return (List<Account>) Database.query(
-      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE NumberOfEmployees > ' +
+      'SELECT Name, AnnualRevenue, Industry FROM Account WHERE Type = :sec AND NumberOfEmployees > ' +
       filterValue +
       ' ORDER BY Name'
     );
@@ -144,6 +188,7 @@ public with sharing class AccountController {
     acct.Name = 'Cruzcampo';
     acct.AnnualRevenue = 1000000;
     acct.Industry = 'Food & Beverage';
+    acct.Type = 'Security';
 
     insert acct;
 

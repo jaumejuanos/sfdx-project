@@ -7,8 +7,9 @@ public with sharing class Exercise1 {
   @AuraEnabled(cacheable=true)
   public static List<Lead> getFilteredLeadsInjection(String searchValue) {
     String likeValue = '\'%' + searchValue + '%\'';
+    String sec = 'Security';
     return (List<Lead>) Database.query(
-      'SELECT Name, Rating FROM Lead WHERE Name LIKE ' +
+      'SELECT Name, Rating FROM Lead WHERE LeadSource = :sec AND Name LIKE ' +
       likeValue +
       ' ORDER BY Name'
     );
