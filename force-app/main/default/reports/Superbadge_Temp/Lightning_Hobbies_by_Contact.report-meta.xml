@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_77349130</developerName>
+        <masterLabel>Category</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Contacts.Contact_Hobbies__r$Hobby__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>BASE jumping</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bird watching</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Camping</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kayaking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mountain biking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mountaineering</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Orienteering</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rafting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sailing</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Skydiving</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Snowboarding</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Speed skating</sourceValue>
+            </sourceValues>
+            <value>Outdoor Activities</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account.Contacts.Contact_Hobbies__r$Hobby__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>BucketField_77349130</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Outdoor Activities</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Contacts$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Lightning Hobbies by Contact</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Contacts_and_Contact_Hobbies__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

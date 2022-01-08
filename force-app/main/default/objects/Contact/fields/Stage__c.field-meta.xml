@@ -35,6 +35,11 @@
                 <default>false</default>
                 <label>Archive</label>
             </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

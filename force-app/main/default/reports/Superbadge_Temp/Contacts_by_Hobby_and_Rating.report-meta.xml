@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_78211306</developerName>
+        <masterLabel>Hobby Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account.Contacts.Contact_Hobbies__r$Hobby__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Mountain biking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mountaineering</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Orienteering</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bird watching</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Camping</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kayaking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rafting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sailing</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Skydiving</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Snowboarding</sourceValue>
+            </sourceValues>
+            <value>Outdoor Activities</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Painting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Photography</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Origami</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sculpting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sketching</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Woodworking</sourceValue>
+            </sourceValues>
+            <value>Arts and Crafts</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>BASE jumping</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Speed skating</sourceValue>
+            </sourceValues>
+            <value>Extreme Sports</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Board games</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bridge</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Chess</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lego building</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marbles</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Poker</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sudoku</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Video gaming</sourceValue>
+            </sourceValues>
+            <value>Games</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.Contact_Hobbies__r$Hobby__c</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Rating</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_78211306</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Contacts by Hobby and Rating</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Contacts_and_Contact_Hobbies__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>
