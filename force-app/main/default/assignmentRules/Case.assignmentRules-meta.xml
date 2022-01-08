@@ -137,8 +137,8 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>Office</assignedTo>
-            <assignedToType>Queue</assignedToType>
+            <assignedTo>eric_jackson@jaumejuanos.com</assignedTo>
+            <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Case.Subtype__c</field>
                 <operation>equals</operation>

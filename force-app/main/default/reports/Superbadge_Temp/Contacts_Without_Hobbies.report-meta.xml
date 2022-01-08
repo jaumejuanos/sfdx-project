@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_25522601</developerName>
+        <masterLabel>Account Value</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account$Open_Opp_Value__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>100,000</to>
+            </sourceValues>
+            <value>3 Low</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>100,000</from>
+                <to>200,000</to>
+            </sourceValues>
+            <value>2 Med</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>200,000</from>
+            </sourceValues>
+            <value>1 High</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account.Contacts$FirstName</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$LastName</field>
+    </columns>
+    <columns>
+        <field>BucketField_25522601</field>
+    </columns>
+    <columns>
+        <field>Account$Total_Opp_Value__c</field>
+    </columns>
+    <columns>
+        <field>Account$Open_Opp_Value__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Phone</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Email</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Summary</format>
+    <name>Contacts Without Hobbies</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Contacts_and_Contact_Hobbies__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account$Open_Opp_Value__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

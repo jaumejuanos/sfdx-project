@@ -10,6 +10,7 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Security Workshop</label>
     <navType>Standard</navType>
+    <tabs>FLS_and_CRUD</tabs>
     <tabs>soqlInjection</tabs>
     <tabs>xss</tabs>
     <tabs>CSRF_Examples</tabs>
