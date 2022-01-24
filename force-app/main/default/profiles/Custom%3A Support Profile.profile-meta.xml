@@ -140,6 +140,14 @@
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>Solar_Installation_Maintenance</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>Support_Options</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>
     <classAccesses>
         <apexClass>AccConDataFactory</apexClass>
         <enabled>false</enabled>
@@ -418,6 +426,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>LightningSelfRegisterControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Module3RegistrationHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1463,6 +1475,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.EntitlementId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Case.IsClosedOnCreate</field>
         <readable>false</readable>
@@ -1474,8 +1491,23 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.IsStopped</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.Last_Day_of_Month__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.MilestoneStatus</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.MilestoneStatusIcon</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1498,6 +1530,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.ProductId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Product__c</field>
         <readable>true</readable>
@@ -1518,9 +1555,29 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.ServiceContractId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.SlaExitDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.SlaStartDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.SourceId</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.StopStartDate</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -2199,6 +2256,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Close_Date_Today__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.ContractId</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2754,6 +2816,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Rider_History__b.End_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Rider_History__b.Rider_Rating__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Rider_History__b.Service_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Rider_History__b.Start_Location_Latitude__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Rider_History__b.Start_Location_Longitude__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Session__c.Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2928,6 +3015,16 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>User.Account_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>User.Account_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>User.DB_Region__c</field>
         <readable>false</readable>
@@ -2982,6 +3079,10 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Bank_Account_Records</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Calculate_discounts</flow>
     </flowAccesses>
     <flowAccesses>
@@ -3006,7 +3107,19 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>New_Contact</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>New_Lead</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>New_Oppty</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Notification_Case_for_Large_Account</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -3019,6 +3132,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Opportunity_Stage_to_Qualification</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Oppty_Reminder</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -3139,11 +3256,18 @@
         <recordType>Case.General</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Case-Case %28Support%29 Layout</layout>
+        <layout>Case-Inquiry Case Layout</layout>
+        <recordType>Case.Inquiry</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Case-Product Support Case Layout</layout>
         <recordType>Case.Product_Support</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CaseClose-Close Case Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CaseMilestone-Case Milestone Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CollaborationGroup-Group Layout</layout>
@@ -3177,6 +3301,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Contract-Contract Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContractLineItem-Contract Line Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Country_Code__mdt-Country Code Layout</layout>
@@ -3213,6 +3340,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Energy_Audit__c-Energy Audit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Entitlement-Entitlement Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>EntityMilestone-Object Milestone Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Event-Event Layout</layout>
@@ -3285,7 +3418,19 @@
         <layout>Job__c-Job Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Knowledge__kav-Knowledge Layout</layout>
+        <layout>Knowledge__kav-FAQ</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Knowledge__kav-FAQ</layout>
+        <recordType>Knowledge__kav.FAQ</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Knowledge__kav-How To</layout>
+        <recordType>Knowledge__kav.How_To</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Knowledge__kav-Knowledge</layout>
+        <recordType>Knowledge__kav.Troubleshooting</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Lead-Lead %28Support%29 Layout</layout>
@@ -3310,9 +3455,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MetricDataLink-Metric Data Link Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>My_First_Knowledge_Article__kav-My First Knowledge Article Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ObjectTerritory2AssignmentRule-Object Territory Assignment Rule Layout</layout>
@@ -3484,6 +3626,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>ServiceAppointment-Service Appointment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ServiceContract-Service Contract Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ServiceCrew-Service Crew Layout</layout>
@@ -3984,6 +4129,11 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Case.Inquiry</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>true</default>
         <recordType>Case.Product_Support</recordType>
         <visible>true</visible>
@@ -3999,14 +4149,19 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Opportunity.Fast_Opportunity</recordType>
-        <visible>false</visible>
+        <default>true</default>
+        <recordType>Knowledge__kav.FAQ</recordType>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>Opportunity.Residential_Opportunity</recordType>
-        <visible>false</visible>
+        <recordType>Knowledge__kav.How_To</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Knowledge__kav.Troubleshooting</recordType>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
@@ -4086,6 +4241,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Job_Posting_Site__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Knowledge__kav</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -4332,6 +4491,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>LightningConsoleAllowedForUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningExperienceUser</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

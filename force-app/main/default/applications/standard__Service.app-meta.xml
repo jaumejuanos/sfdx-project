@@ -8,14 +8,12 @@
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Case</tabs>
-    <tabs>standard-Solution</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>Waypoint__c</tabs>
-    <tabs>Property__c</tabs>
-    <tabs>Battle_Station__c</tabs>
-    <tabs>Resource__c</tabs>
-    <tabs>Supply__c</tabs>
     <tabs>Suggestion__c</tabs>
     <tabs>Customer_Satisfaction_Survey__c</tabs>
+    <tabs>Knowledge__kav</tabs>
+    <tabs>standard-Entitlement</tabs>
+    <tabs>standard-ServiceContract</tabs>
+    <tabs>standard-Solution</tabs>
 </CustomApplication>
