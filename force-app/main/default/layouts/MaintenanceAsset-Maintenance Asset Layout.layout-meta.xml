@@ -14,6 +14,10 @@
                 <behavior>Required</behavior>
                 <field>AssetId</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ContractLineItemId</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

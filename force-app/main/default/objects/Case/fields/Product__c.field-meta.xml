@@ -12,49 +12,24 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>GC1040</fullName>
+                <fullName>Solar Panels</fullName>
                 <default>false</default>
-                <label>GC1040</label>
+                <label>Solar Panels</label>
             </value>
             <value>
-                <fullName>GC1060</fullName>
+                <fullName>Inverters</fullName>
                 <default>false</default>
-                <label>GC1060</label>
+                <label>Inverters</label>
             </value>
             <value>
-                <fullName>GC3020</fullName>
+                <fullName>Charge Controllers</fullName>
                 <default>false</default>
-                <label>GC3020</label>
+                <label>Charge Controllers</label>
             </value>
             <value>
-                <fullName>GC3040</fullName>
+                <fullName>Batteries</fullName>
                 <default>false</default>
-                <label>GC3040</label>
-            </value>
-            <value>
-                <fullName>GC3060</fullName>
-                <default>false</default>
-                <label>GC3060</label>
-            </value>
-            <value>
-                <fullName>GC5020</fullName>
-                <default>false</default>
-                <label>GC5020</label>
-            </value>
-            <value>
-                <fullName>GC5040</fullName>
-                <default>false</default>
-                <label>GC5040</label>
-            </value>
-            <value>
-                <fullName>GC5060</fullName>
-                <default>false</default>
-                <label>GC5060</label>
-            </value>
-            <value>
-                <fullName>GC1020</fullName>
-                <default>false</default>
-                <label>GC1020</label>
+                <label>Batteries</label>
             </value>
         </valueSetDefinition>
     </valueSet>

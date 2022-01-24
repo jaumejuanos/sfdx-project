@@ -2,8 +2,8 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Product_Support</fullName>
     <active>true</active>
-    <businessProcess>Product Support and Billing</businessProcess>
-    <description>Use to log customer support issues</description>
+    <businessProcess>Product Support Process</businessProcess>
+    <description>Record type for product support</description>
     <label>Product Support</label>
     <picklistValues>
         <picklist>Origin</picklist>
@@ -49,39 +49,19 @@
     <picklistValues>
         <picklist>Product__c</picklist>
         <values>
-            <fullName>GC1020</fullName>
+            <fullName>Batteries</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>GC1040</fullName>
+            <fullName>Charge Controllers</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>GC1060</fullName>
+            <fullName>Inverters</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>GC3020</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GC3040</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GC3060</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GC5020</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GC5040</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GC5060</fullName>
+            <fullName>Solar Panels</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -141,11 +121,15 @@
     <picklistValues>
         <picklist>Type</picklist>
         <values>
-            <fullName>Hardware</fullName>
+            <fullName>Feature Request</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Software</fullName>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
             <default>false</default>
         </values>
     </picklistValues>

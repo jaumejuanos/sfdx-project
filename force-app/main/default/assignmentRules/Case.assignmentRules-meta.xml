@@ -125,8 +125,30 @@
         </ruleEntry>
     </assignmentRule>
     <assignmentRule>
-        <fullName>Support</fullName>
+        <fullName>Standard Case Assignment</fullName>
         <active>true</active>
+        <ruleEntry>
+            <assignedTo>Product_Support_Tier_1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Product Support</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Product_Support_Tier_2</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Inquiry</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Support</fullName>
+        <active>false</active>
         <ruleEntry>
             <assignedTo>Desktop</assignedTo>
             <assignedToType>Queue</assignedToType>
@@ -137,7 +159,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>eric_jackson@jaumejuanos.com</assignedTo>
+            <assignedTo>jaumejuanos@jaumejuanos.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Case.Subtype__c</field>

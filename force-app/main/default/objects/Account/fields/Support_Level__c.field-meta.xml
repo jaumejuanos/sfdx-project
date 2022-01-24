@@ -11,19 +11,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Bronze</fullName>
+                <fullName>Platinum</fullName>
                 <default>false</default>
-                <label>Bronze</label>
-            </value>
-            <value>
-                <fullName>Silver</fullName>
-                <default>false</default>
-                <label>Silver</label>
+                <label>Platinum</label>
             </value>
             <value>
                 <fullName>Gold</fullName>
                 <default>false</default>
                 <label>Gold</label>
+            </value>
+            <value>
+                <fullName>Silver</fullName>
+                <default>false</default>
+                <label>Silver</label>
             </value>
         </valueSetDefinition>
     </valueSet>
