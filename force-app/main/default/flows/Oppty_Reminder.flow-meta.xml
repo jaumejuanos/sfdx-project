@@ -110,7 +110,7 @@
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <textTemplates>
         <name>Opportunity_Reminder</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
