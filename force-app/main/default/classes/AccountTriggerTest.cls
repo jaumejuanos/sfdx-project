@@ -15,7 +15,7 @@ private class AccountTriggerTest {
         // Verify that new Accounts have shippingstate = CA
         for (Account a:accts)
         {
-        	System.assertEquals('CA', a.ShippingState, 'ERROR');
+        	System.assertEquals('CA', a.BillingState, 'ERROR');
 		}
     }
 }
