@@ -5,7 +5,7 @@ import LightningAlert from "lightning/alert";
 export default class LwcConfirmDelete extends LightningElement {
     async handleConfirmClick() {
         const result = await LightningConfirm.open({
-            message: "Are you sure you want to delete this?",
+            message: "All events, visit reports and tasks linked to the contact will be deleted. Do you want to continue??",
             variant: "default", // headerless
             label: "Delete a record"
         });

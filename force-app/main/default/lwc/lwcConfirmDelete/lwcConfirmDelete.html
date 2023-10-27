@@ -1,11 +1,10 @@
 <template>
-    <lightning-card title="Delete contact">
-      <div class="slds-var-p-around_medium">
-        <p>All events, visit reports and tasks linked to the contact will be deleted. Do you want to continue?</p>
-        <lightning-button
-        label="Yes, I want to delete this record"
+  <lightning-card title="Delete contact" icon-name="utility:user">
+    <div class="slds-box">
+      <lightning-button
+        label="Delete Contact"
         onclick={handleConfirmClick}
-        ></lightning-button>
-      </div>
-    </lightning-card>
+      ></lightning-button>
+    </div>
+  </lightning-card>
 </template>
